@@ -13,6 +13,7 @@
 		A4BCAAC628F2F9D000EDC56B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4BCAAC428F2F9D000EDC56B /* Main.storyboard */; };
 		A4BCAAC828F2F9D100EDC56B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4BCAAC728F2F9D100EDC56B /* Assets.xcassets */; };
 		A4BCAACB28F2F9D100EDC56B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4BCAAC928F2F9D100EDC56B /* LaunchScreen.storyboard */; };
+		A4BCAAD328F2FA5C00EDC56B /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A4BCAAD228F2FA5C00EDC56B /* FlowerClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A4BCAAC728F2F9D100EDC56B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4BCAACA28F2F9D100EDC56B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4BCAACC28F2F9D100EDC56B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4BCAAD228F2FA5C00EDC56B /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				A4BCAAC428F2F9D000EDC56B /* Main.storyboard */,
 				A4BCAAC728F2F9D100EDC56B /* Assets.xcassets */,
 				A4BCAAC928F2F9D100EDC56B /* LaunchScreen.storyboard */,
+				A4BCAAD228F2FA5C00EDC56B /* FlowerClassifier.mlmodel */,
 				A4BCAACC28F2F9D100EDC56B /* Info.plist */,
 			);
 			path = FlowerClassifier;
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BCAAD328F2FA5C00EDC56B /* FlowerClassifier.mlmodel in Sources */,
 				A4BCAAC328F2F9D000EDC56B /* ViewController.swift in Sources */,
 				A4BCAABF28F2F9D000EDC56B /* AppDelegate.swift in Sources */,
 				A4BCAAC128F2F9D000EDC56B /* SceneDelegate.swift in Sources */,
