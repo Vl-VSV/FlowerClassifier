@@ -16,17 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yTj-LG-kab">
-                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsf-Rq-EpC">
+                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yTj-LG-kab">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="371.66666666666669"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="BKk-GV-grP">
+                                        <rect key="frame" x="0.0" y="381.66666666666674" width="390" height="371.33333333333326"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yTj-LG-kab" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7kf-sT-MWc"/>
-                            <constraint firstItem="yTj-LG-kab" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ba2-1z-rFI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yTj-LG-kab" secondAttribute="bottom" id="DQR-cc-Te7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yTj-LG-kab" secondAttribute="trailing" id="QYD-Ek-UzL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="qsf-Rq-EpC" secondAttribute="top" id="IXL-iL-upD"/>
+                            <constraint firstItem="qsf-Rq-EpC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LL3-KQ-vQ5"/>
+                            <constraint firstItem="qsf-Rq-EpC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iJF-dg-oTf"/>
+                            <constraint firstAttribute="bottom" secondItem="qsf-Rq-EpC" secondAttribute="bottom" id="xSe-jp-AmV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cIb-lz-9o8">
@@ -37,6 +48,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="descriptionLabel" destination="BKk-GV-grP" id="GrE-mh-2Ka"/>
                         <outlet property="imageView" destination="yTj-LG-kab" id="g1b-qD-pUF"/>
                     </connections>
                 </viewController>
