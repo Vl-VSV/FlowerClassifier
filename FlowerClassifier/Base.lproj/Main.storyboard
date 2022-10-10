@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsf-Rq-EpC">
-                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsf-Rq-EpC">
+                                <rect key="frame" x="20" y="91" width="350" height="743"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yTj-LG-kab">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="371.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="366.66666666666669"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="BKk-GV-grP">
-                                        <rect key="frame" x="0.0" y="381.66666666666674" width="390" height="371.33333333333326"/>
+                                        <rect key="frame" x="175" y="376.66666666666674" width="0.0" height="366.33333333333326"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -35,9 +35,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="qsf-Rq-EpC" secondAttribute="top" id="IXL-iL-upD"/>
-                            <constraint firstItem="qsf-Rq-EpC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LL3-KQ-vQ5"/>
-                            <constraint firstItem="qsf-Rq-EpC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iJF-dg-oTf"/>
-                            <constraint firstAttribute="bottom" secondItem="qsf-Rq-EpC" secondAttribute="bottom" id="xSe-jp-AmV"/>
+                            <constraint firstItem="qsf-Rq-EpC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LL3-KQ-vQ5"/>
+                            <constraint firstItem="qsf-Rq-EpC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="iJF-dg-oTf"/>
+                            <constraint firstAttribute="bottom" secondItem="qsf-Rq-EpC" secondAttribute="bottom" constant="10" id="xSe-jp-AmV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cIb-lz-9o8">

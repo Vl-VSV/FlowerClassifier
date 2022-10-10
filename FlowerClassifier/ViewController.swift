@@ -10,6 +10,7 @@ import CoreML
 import Vision
 import Alamofire
 import SwiftyJSON
+import SDWebImage
 
 class ViewController: UIViewController {
     
@@ -23,12 +24,13 @@ class ViewController: UIViewController {
     var parameters : [String:String] = [
         "format" : "json",
         "action" : "query",
-        "prop" : "extracts",
+        "prop" : "extracts|pageimages",
         "exintro" : "",
         "explaintext" : "",
         "titles" : "flowerName",
         "indexpageids" : "",
         "redirects" : "1",
+        "pithumbsize" : "500"
     ]
     
     override func viewDidLoad() {
@@ -53,7 +55,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
             if let clImage = CIImage(image: userPickedImage) {
                 detect(flowerImage: clImage)
             }
-            imageView.image = userPickedImage
+                //imageView.image = userPickedImage
         }
         
         imagePicker.dismiss(animated: true)
@@ -72,7 +74,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
             }
             //print(results)
             if let saveResultF = results.first {
-                self.title = saveResultF.identifier
+                self.title = saveResultF.identifier.capitalized
                 self.parameters["titles"] = saveResultF.identifier
                 self.performRequest(flowerName: saveResultF.identifier)
             }
@@ -95,11 +97,11 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
                 let json = JSON(value)
                 let pageid = json["query"]["pageids"][0].stringValue
                 self.descriptionLabel.text = json["query"]["pages"][pageid]["extract"].stringValue
+                self.imageView.sd_setImage(with: URL(string: json["query"]["pages"][pageid]["thumbnail"]["source"].stringValue))
             
             case .failure(let error):
                 print(error)
             }
-            
         }
     }
 }
